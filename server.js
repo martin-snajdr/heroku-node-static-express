@@ -11,6 +11,8 @@ process.env.PWD = process.cwd()
 app.set('port', (process.env.PORT || 3333))
 
 // Require http auth
+// Remove comments below if you want HTTP Auth and change credentials to your liking
+/*
 app.use(http_auth.realm('Protected Area'));
 app.use(function (req, res, next) {
     if (req.username == 'john.doe' && req.password == 'topsecret123') {
@@ -19,6 +21,7 @@ app.use(function (req, res, next) {
         res.sendStatus(403);
     }
 });
+*/
 
 // Compress and serve content
 app.use(compress);
